@@ -18,6 +18,25 @@
 
 <body>
 
+  <div class="ex">
+    <form id='dd1.mob1' name='dd1.mob1' method='post' action=' '>   
+        <p><label>Select Artist</label></p><br/>
+        <select onchange=filter.submit() name='dd1mob1' id='dd1mob1'>
+            <option>Drake</option>
+            <option>Lady Gaga</option>
+            <option>Taylor Swift</option>" . $options . "
+        </select>
+    </form>
+    <form class="ey" id='dd2.mob1' name='dd2.mob1' method='post' action=''> 
+        <p><label>Select Events</label></p><br/>
+        <select onchange=filter.submit() name='dd2mob1' id='dd2mob1'>
+          <option>Upcoming</option>
+          <option>Past</option>
+          <option>All</option>" . $options . "
+        </select>
+    </form>
+  </div>
+
   <!-- The div that holds our map -->
   <div id="map"></div>
 

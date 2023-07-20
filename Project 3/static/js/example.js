@@ -12,8 +12,8 @@ d3.json(urlDrake).then(function (data){
 });
 
 let myMap = L.map("map", {
-    center: [45.52, -122.67],
-    zoom: 13
+    center: [10, -10],
+    zoom: 3
 });
   
 // Adding a tile layer (the background map image) to our map:

@@ -4,9 +4,42 @@ body {
   margin: 0;
 }
 
+
 /* Set map, body, and html to 100% of the screen size. */
-#map,
+#map{
+  height: 80%;
+}
+
 body,
 html {
   height: 100%;
 }
+body
+ {
+  background-image:url('gradient1.jpg');
+  background-repeat:repeat-x;
+ }
+ .ex
+ {
+  margin:auto;
+  width:90%;
+  padding:10px;
+  border:outset;
+ }
+ select
+ {
+  display:inline;
+  cursor:pointer;
+ }
+.ey
+ {
+  display:inline-block;
+ } 
+form{
+    display:inline-block;
+}
+.gap
+ {
+  clear:both;
+  margin-bottom:2px;
+  }
