@@ -18,6 +18,7 @@ db = client.Project3_BandsInTown
 #database for now; using only Tswift as example
 api = "https://rest.bandsintown.com/artists/Taylor%20Swift/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date=all"
 apiDrake = "https://rest.bandsintown.com/artists/Drake/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date=all"
+apiGaga = "https://rest.bandsintown.com/artists/Lady%20Gaga/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date=all"
 
 @app.route("/")
 def page():
@@ -36,6 +37,13 @@ def drakeFunct():
     for d in drake_data:
         del d["_id"]
     return jsonify(drake_data)
+
+@app.route("/data/gaga")
+def gagaFunct():
+    gaga_data = list(db["LadyGaga"].find())
+    for g in gaga_data:
+        del g["_id"]
+    return jsonify(gaga_data)
 
 
 if __name__ == "__main__":
