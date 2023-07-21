@@ -21,4 +21,21 @@ let myMap = L.map("map", {
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
+
+var artist = document.getElementById("dd1mob1");
+var event = document.getElementById("dd2mob1");
+
+function onChangeArtist() {
+  var valueArtist = artist.value;
+  console.log(valueArtist);
+}
+artist.onchange = onChangeArtist;
+onChangeArtist();
+
+function onChangeEvent() {
+    var valueEvent = event.value;
+    console.log(valueEvent);
+}
+event.onchange = onChangeEvent;
+onChangeEvent();
   
