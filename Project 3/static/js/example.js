@@ -40,15 +40,12 @@ function onChangeEvent(e) {
     return e;
 }
 
-let newUrl = "https://rest.bandsintown.com/artists/"+artist+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+event;
-console.log(newUrl);
-
-
 function map() { // Get the current date
+    let newUrl = "https://rest.bandsintown.com/artists/"+artist.value+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+event.value;
     console.log(newUrl);
     const currentDate = new Date();
     let radius = 100;
-    d3.json(url).then(function (data) {
+    d3.json(newUrl).then(function (data) {
     for (let i = 0; i < data.length; i++) {
         //convert lat and long into int.
         let lat = parseInt(data[i].venue.latitude);
