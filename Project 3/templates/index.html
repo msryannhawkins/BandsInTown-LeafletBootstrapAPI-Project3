@@ -21,16 +21,17 @@
   <div class="ex">
     <form id='dd1.mob1' name='dd1.mob1' method='post' action=' '>   
         <p><label>Select Artist</label></p><br/>
-        <select onchange=filter.submit() name='dd1mob1' id='dd1mob1'>
+        <select onchange="map()" name='dd1mob1' id='dd1mob1'>
             <option value="Taylor%20Swift">All Artists</option>
             <option value="Drake">Drake</option>
             <option value="Lady%20Gaga">Lady Gaga</option>
             <option value="Taylor%20Swift">Taylor Swift</option>" . $options . "
         </select>
+        <button type="button1" id="calc1">Refresh</button>
     </form>
     <form class="ey" id='dd2.mob1' name='dd2.mob1' method='post' action=''> 
         <p><label>Select Events</label></p><br/>
-        <select onchange=filter.submit() name='dd2mob1' id='dd2mob1'>
+        <select onchange="map()" name='dd2mob1' id='dd2mob1'>
           <option value="all">All</option>
           <option value="Upcoming">Upcoming</option>
           <option value="Past">Past</option>" . $options . "

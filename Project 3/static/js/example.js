@@ -33,36 +33,22 @@ function onChangeArtist(a) {
     console.log(a);
     return a;
 }
-artist.onchange = onChangeArtist();
 
 function onChangeEvent(e) {
     e = event.options[event.selectedIndex].value
     console.log(e);
     return e;
 }
-event.onchange = onChangeEvent();
 
-let newUrl = "https://rest.bandsintown.com/artists/"+onChangeArtist()+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+onChangeEvent();
+let newUrl = "https://rest.bandsintown.com/artists/"+artist+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+event;
 console.log(newUrl);
 
-// function newURL(onChangeArtist, onChangeEvent) {
-//     console.log("https://rest.bandsintown.com/artists/"+onChangeArtist+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+onChangeEvent);
-//     return "https://rest.bandsintown.com/artists/"+onChangeArtist+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+onChangeEvent;
-// }
-// newUrl();
 
-//let artistURL = "https://rest.bandsintown.com/artists/"+onChangeArtist()+"/events?app_id=23bc806cf4fe0991e7a90f97a8e63576&date="+onChangeEvent();
-//console.log(artistURL);
-
-
-
-
-
-
-
-// Get the current date
-const currentDate = new Date();
-d3.json(url).then(function (data) {
+function map() { // Get the current date
+    console.log(newUrl);
+    const currentDate = new Date();
+    let radius = 100;
+    d3.json(url).then(function (data) {
     for (let i = 0; i < data.length; i++) {
         //convert lat and long into int.
         let lat = parseInt(data[i].venue.latitude);
@@ -77,7 +63,7 @@ d3.json(url).then(function (data) {
                 //long
                 long
             ];
-            let radius = 20; // Adjust the initial radius as needed
+            //let radius = 100; // Adjust the initial radius as needed
             let circle = L.circle(coord, {
                 fillOpacity: 0.75,
                 color: color,
@@ -86,7 +72,7 @@ d3.json(url).then(function (data) {
             circle.bindPopup(
                 "Location: " + data[i].venue.city +", "+ data[i].venue.region +", "+ data[i].venue.country
                 + "<br> Venue: " + data[i].venue.name
-                + "<br> Date: " + data[i].datetime
+                + "<br> Date: " + new Date(data[i].datetime)
                 + "</br>Purchase Tickets: <a href=" + data[i].url + "> Website </a>"
             ).addTo(myMap);
         }
@@ -95,7 +81,7 @@ d3.json(url).then(function (data) {
     myMap.on("zoomend", function () {
         let zoomLevel = myMap.getZoom();
         // Calculate the new radius based on the zoom level
-        let newRadius = radius * 2 * zoomLevel; // Adjust the multiplier as needed
+        let newRadius = radius * 4 * zoomLevel; // Adjust the multiplier as needed
         // Iterate through the circles and update their radius
         myMap.eachLayer(function (layer) {
             if (layer instanceof L.Circle) {
@@ -103,4 +89,6 @@ d3.json(url).then(function (data) {
             }
         });
     });
-});
+    });
+}
+map();
