@@ -1,40 +1,67 @@
-/* Remove the default margin and padding from the body. */
+/* style.css */
+​
+/* Global styles */
 body {
+  background-image: url('https://img.freepik.com/free-vector/blue-background-people-concert_23-2147604883.jpg?w=740&t=st=1690427190~exp=1690427790~hmac=b416197894a8d1fcdcc02592f0ab638faa5e78866cd9f07996ce58ae8bcf76d7');
+  background-size: cover; /* Adjust this to 'contain' if you prefer a different scaling */
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
   padding: 0;
+}
+​
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+​
+/* Header styles */
+header {
+  color: #fff;
+  padding: 10px;
+}
+​
+h1 {
+  font-size: 36px;
   margin: 0;
 }
-
-
-/* Set map, body, and html to 100% of the screen size. */
-#map{
-  height: 80%;
+​
+/* Introduction styles */
+main {
+  background-color: rgba(136, 197, 145, 0.5);
+  color: #fff;
+  padding: 15px;
 }
-
-body,
-html {
-  height: 100%;
+​
+.container p {
+  font-size: 18px;
 }
- .ex
- {
-  margin:10px, 50px, 20px, 0;
-  width:15%;
-  padding:10px;
-  border:outset;
- }
- select
- {
-  display:inline;
-  cursor:pointer;
- }
-.ey
- {
-  display:inline-block;
- } 
-form{
-    display:inline-block;
+​
+/* Artist and Events Selection Forms styles */
+.form-group {
+  margin-bottom: 10px;
+  color: #fff;
 }
-.gap
- {
-  clear:both;
-  margin-bottom:2px;
-  }
+​
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+​
+/* Map container styles */
+#map {
+  height: 400px;
+}
+​
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}

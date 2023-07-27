@@ -1,46 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project 3</title>
-
+​
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin="" />
-
+​
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="../static/js/style.css">
+  
 </head>
-
+​
 <body>
-
-  <div class="ex">
-    <form id='dd1.mob1' name='dd1.mob1' method='post' action=' '>   
-        <p><label>Select Artist</label></p><br/>
-        <select onchange="map()" name='dd1mob1' id='dd1mob1'>
-            <option value="Taylor%20Swift">All Artists</option>
-            <option value="Drake">Drake</option>
-            <option value="Lady%20Gaga">Lady Gaga</option>
-            <option value="Taylor%20Swift">Taylor Swift</option>" . $options . "
-        </select>
-    </form>
-    <form class="ey" id='dd2.mob1' name='dd2.mob1' method='post' action=''> 
-        <p><label>Select Events</label></p><br/>
-        <select onchange="map()" name='dd2mob1' id='dd2mob1'>
-          <option value="all">All</option>
-          <option value="upcoming">Upcoming</option>
-          <option value="past">Past</option>" . $options . "
-        </select>
-    </form>
+​
+  <!-- Header -->
+  <header class="text-center">
+    <h1>BandsInTown Concert Information</h1>
+  </header>
+  
+  <!-- Introduction -->
+  <main>
+    <div class="container mt-4">
+      <p class="lead">This website uses data from BandsInTown to provide an interactive map of past and upcoming concerts from some of today's most popular artists. 
+        Use the drop-down menus to select artists and event types. 
+      </p>
+    <div>
+  </main>
+​
+  <!-- Artist and Events Selection Forms -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <form id='dd1.mob1' name='dd1.mob1' method='post' action=' '>
+          <div class="form-group">
+            <label for="dd1mob1">Select Artist</label>
+            <select onchange="map()" class="form-control" name='dd1mob1' id='dd1mob1'>
+              <option value="" disabled>Select Top Artists</option>
+              <option value="Adele">Adele</option>
+              <option value="Ariana%20Grande">Ariana Grande</option>
+              <option value="Beyonce">Beyonce</option>
+              <option value="Billie%20Eilish">Billie Eilish</option>
+              <option value="Bruno%20Mars">Bruno Mars</option>
+              <option value="BTS">BTS</option>
+              <option value="Coldplay">Coldplay</option>
+              <option value="Drake">Drake</option>
+              <option value="Dua%20Lipa">Dua Lipa</option>
+              <option value="Ed%20Sheeran">Ed Sheeran</option>
+              <option value="Elton%20John">Elton John</option>
+              <option value="Eminem">Eminem</option>
+              <option value="Glass%20Animals">Glass Animals</option>
+              <option value="Harry%20Styles">Harry Styles</option>
+              <option value="Imagine%20Dragons">Imagine Dragons</option>
+              <option value="Justin%20Bieber">Justin Bieber</option>
+              <option value="Lady%20Gaga">Lady Gaga</option>
+              <option value="Maroon%205">Maroon 5</option>
+              <option value="One%20Direction">One Direction</option>
+              <option value="Post%20Malone">Post Malone</option>
+              <option value="Rihanna">Rihanna</option>
+              <option value="Taylor%20Swift">Taylor Swift</option>
+              <option value="The%20Weeknd">The Weeknd</option>" . $options . "
+              <!-- ... Other options ... -->
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form class="ey" id='dd2.mob1' name='dd2.mob1' method='post' action=''>
+          <div class="form-group">
+            <label for="dd2mob1">Select Events</label>
+            <select onchange="map()" class="form-control" name='dd2mob1' id='dd2mob1'>
+              <option value="" disabled>Concert Times</option>
+              <option value="all">All</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="past">Past</option>
+              <!-- ... Other options ... -->
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-
+​
   <!-- The div that holds our map -->
-  <div id="map"></div>
-
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="map" style="height: 400px;"></div>
+      </div>
+    </div>
+  </div>
+​
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Created by Danny Flanagan, Ryann Hawkins, and Rachel Jo Sanchez | 2023</p>
+  </footer>
+​
+​
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -50,6 +114,9 @@
   <!-- Our JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="../static/js/example.js"> </script> 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  
 </body>
-
+​
 </html>
