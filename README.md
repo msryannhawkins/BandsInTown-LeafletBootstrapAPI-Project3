@@ -4,16 +4,44 @@ Mapping Popular Artist's Past, Upcoming, and All Events using BandsInTown API
 Jo Sanchez | Danny Flanagan | Ryann Hawkins 
 
 This project is an ETL project where we collected music artists' data from the BandsInTown API, and looked to draw a comparison between event locations as well as upcoming and past events.
-*********
-  EDIT
-Since the data that feeds the charts is not hosted online, you will need to run the following steps to obtain the data to fill the charts so they generate locally:
+Please view the following images from our presentation slide in order to gain a better understanding of our project. Then, feel free to launch our site using a live server through VScode or using our github.io. Enjoy!
 
-Run the Load.ipynb file in Jupyter Notebook to put the necessary files into a database
-This only needs to be done one time
-In the app.py file, start a terminal and start the API Flask by using the following command: python app.py
-This will need to be done every time you launch the page
-Only then will the proper data generate, and the charts will load properly. Enjoy!
-**********
+![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.17.49%20PM.png
+ "slide1")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.17.56%20PM.png
+ "slide2")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.04%20PM.png
+ "slide3")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.13%20PM.png
+ "slide4")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.21%20PM.png
+ "slide5")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.28%20PM.png
+ "slide6")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.35%20PM.png
+ "slide7")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.42%20PM.png
+ "slide8")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.18.51%20PM.png
+ "slide9")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.19.00%20PM.png
+ "slide10")
+
+ ![alt text](https://github.com/msryannhawkins/BandsInTown-LeafletBootstrapAPI-Project3/blob/main/PresentationSlides/Screenshot%202023-07-27%20at%207.19.25%20PM.png
+ "slide11")
+
+
+
+*********
 
 Project Parameters
 Data and Delivery
